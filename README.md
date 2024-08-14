@@ -2,6 +2,9 @@
 
 ## 🌐 [Live Preview](https://sikhbeparwah.engineer/Microproject-2-Beta-Ver.1/)
 
+
+# 📽️ [@Demo Video](https://georgiancollege-my.sharepoint.com/:v:/g/personal/200545258_student_georgianc_on_ca/EQelXYxiomlCl6il3IrNwBIB6Z-3J3A1QXyCfNw-0Ux3aw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=JbxqjG)
+
 This project is a web-based application built using Vue.js, showcasing modular front-end development with a well-organized file structure.
 
 ### 📂 Repository
