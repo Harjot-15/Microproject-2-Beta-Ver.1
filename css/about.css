@@ -258,3 +258,10 @@ button {
 button:hover {
     background-color: #C24113;
 }
+
+footer.footer p {
+    color: #e0d8d6; /* Change the text color to a different color */
+    font-size: 0.9 rem; /* Adjust the font size */
+    font-weight:; /* Make the text bold */
+    margin: 0; /* Remove any default margin */
+}

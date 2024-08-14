@@ -16,26 +16,94 @@
 
 /* Task item */
 .todo-list li {
-    background: #ffffff;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 8px;
+    background: #ffffff; /* White background for task cards */
+    margin: 10px 0; /* Spacing between task items */
+    padding: 15px; /* Padding inside the task card */
+    border-radius: 8px; /* Rounded corners */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    transition: transform 0.2s ease-in-out;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    cursor: grab;
+    transition: transform 0.2s ease-in-out; /* Smooth transformation on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    cursor: grab; /* Cursor indicates draggable items */
 }
 
+/* Task item hover effect */
 .todo-list li:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Lift the task card slightly on hover */
 }
 
-/* Completed task */
+/* Completed task styling */
 .todo-list li.completed {
-    text-decoration: line-through;
-    color: gray;
+    text-decoration: line-through; /* Strike-through text for completed tasks */
+    color: gray; /* Gray text color for completed tasks */
+}
+
+/* Task information container */
+.task-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px; /* Spacing between task info and actions */
+}
+
+/* Task title styling */
+.task-info span {
+    font-size: 1.2rem; /* Slightly larger font for the task title */
+    font-weight: bold; /* Bold title text */
+}
+
+/* Task due date styling */
+.task-info small {
+    color: #888; /* Gray color for the due date */
+    font-size: 0.9rem; /* Slightly smaller font for the due date */
+}
+
+/* Star icon for priority */
+.star-icon {
+    cursor: pointer; /* Pointer cursor to indicate clickable */
+    margin-left: auto; /* Aligns the star icon to the right */
+}
+
+.star-icon svg {
+    width: 24px; /* Fixed width for the star icon */
+    height: 24px; /* Fixed height for the star icon */
+}
+
+/* Filled star for priority tasks */
+.star-icon.filled svg {
+    fill: green; /* Green color for filled star indicating priority */
+}
+
+/* Task actions container */
+.task-actions {
+    display: flex;
+    gap: 10px; /* Spacing between action buttons */
+    margin-top: 10px; /* Spacing above the action buttons */
+}
+
+/* Edit button styling */
+.task-actions button {
+    background: #007bff; /* Blue background for edit button */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 8px 12px; /* Padding inside the buttons */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for buttons */
+    transition: background 0.3s ease-in-out; /* Smooth transition for background */
+}
+
+.task-actions button:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+/* Delete button with red background */
+.task-actions button:last-child {
+    background: #dc3545; /* Red background for delete button */
+}
+
+.task-actions button:last-child:hover {
+    background: #c82333; /* Darker red on hover */
 }
 
 /* Buttons */
@@ -51,6 +119,23 @@ button {
 
 button:hover {
     background: #C24113;
+}
+
+/* Description button */
+.description-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.description-button:hover {
+    background: #0056b3;
 }
 
 /* Modal styling */
@@ -78,6 +163,12 @@ button:hover {
 .modal-content h3 {
     margin-bottom: 20px;
     color: #E95420;
+}
+
+.modal-content p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 /* Form elements */
@@ -139,6 +230,32 @@ input:checked + .slider:before {
     transform: translateX(26px);
 }
 
+/* Style for buttons inside the modal */
+.modal-content button {
+    background: #007bff;            /* Default background color (blue) */
+    color: white;                   /* White text color */
+    border: none;                   /* Remove default border */
+    padding: 10px 15px;             /* Padding for the button */
+    border-radius: 5px;             /* Rounded corners */
+    cursor: pointer;                /* Pointer cursor on hover */
+    font-size: 1rem;                /* Font size */
+    transition: background 0.3s ease-in-out; /* Smooth transition for background color */
+    margin: 10px 5px;               /* Margin around the buttons */
+}
+
+.modal-content button:hover {
+    background: #0056b3;            /* Darker shade on hover */
+}
+
+/* Specific styling for the 'Cancel' button */
+.modal-content button:last-of-type {
+    background: #dc3545;            /* Red background for the 'Cancel' button */
+}
+
+.modal-content button:last-of-type:hover {
+    background: #c82333;            /* Darker red on hover */
+}
+
 /* Task sections */
 .task-sections {
     display: flex;
@@ -160,6 +277,83 @@ input:checked + .slider:before {
     margin-bottom: 15px;
     color: #343a40;
 }
+
+/* Task information container */
+.task-info {
+    display: flex;
+    flex-direction: column; /* Stack the task info elements vertically */
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: -15px; /* Spacing between task info and actions */
+}
+
+/* Task title styling */
+.task-info .task-title {
+    font-size: 1.2rem; /* Slightly larger font for the task title */
+    font-weight: bold; /* Bold title text */
+    margin-bottom: 20px; /* Spacing below the title */
+}
+
+/* Task due date styling */
+.task-info .task-date {
+    color: #888; /* Gray color for the due date */
+    font-size: 0.9rem; /* Slightly smaller font for the due date */
+    margin-bottom: 15px; /* Spacing below the date */
+    margin-top: 8px; /* Spacing above the button */
+}
+
+/* Description button styling inside task info */
+.task-info .description-button {
+    align-self: flex-start; /* Align the description button to the start */
+    margin-top: 8px; /* Spacing above the button */
+}
+
+
+/* Task actions container */
+.task-actions {
+    display: flex;
+    gap: 10px; /* Spacing between action buttons */
+    margin-top: 10px; /* Spacing above the action buttons */
+}
+
+/* Action button styling */
+.task-actions button {
+    background: #007bff; /* Blue background for edit button */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 8px 12px; /* Padding inside the buttons */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 0.9rem; /* Font size of the buttons */
+    cursor: pointer; /* Pointer cursor for buttons */
+    transition: background 0.3s ease-in-out; /* Smooth transition for background */
+}
+
+/* Hover effect for action buttons */
+.task-actions button:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+/* Specific styling for the 'Delete' button */
+.task-actions button.delete-button {
+    background: #dc3545; /* Red background for delete button */
+}
+
+.task-actions button.delete-button:hover {
+    background: #c82333; /* Darker red on hover */
+}
+
+/* Adjusting size of the buttons */
+.task-actions button {
+    padding: 5px 10px; /* Increase padding for larger buttons */
+    font-size: 0.9rem; /* Increase font size */
+}
+
+/* Making the buttons full width inside flex container (optional) */
+.task-actions button {
+    flex: 1; /* Makes each button take equal space */
+    text-align: center; /* Center the text inside the button */
+}
+
 
 /* Labeled tasks section */
 .labeled-tasks {
@@ -186,83 +380,70 @@ input:checked + .slider:before {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Label heading */
-.label-column h4 {
+/* Label settings section */
+.label-settings {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.label-card {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Label item styling */
+.label-item {
+    display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    max-width: 300px;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33% - 20px);
 }
 
-/* Task details */
-.task-details {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.task-details span {
+/* Label name */
+.label-item span {
+    flex-grow: 1;
+    margin-right: 15px;
     font-size: 1rem;
-    color: #333;
 }
 
-.task-details small {
-    font-size: 0.9rem;
-    color: #666;
-}
-
-.task-details p {
-    font-size: 0.9rem;
-    color: #555;
-    margin: 5px 0 0;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-/* Task actions (Edit/Delete) */
-.task-actions {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-    justify-content: flex-end;
-}
-
-.task-actions button {
-    padding: 5px 10px;
-    font-size: 0.8rem;
-}
-
-/* Star icon for priority tasks */
-.star-icon {
+/* Margin for the color input */
+.label-item input[type="color"] {
+    margin-right: 15px; /* Adjusts the space to the right of the input */
+    margin-left: 10px; /* Adjusts the space to the left of the input */
     cursor: pointer;
-    margin-left: auto;
 }
 
-.star-icon.filled svg {
-    fill: green;
-    stroke: none;
+/* Smaller buttons for label actions */
+.label-item button {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    margin: 5px;
 }
 
-/* Priority toggle */
-.priority-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.edit-button {
+    background-color: #007bff;
 }
 
-.priority-toggle span {
-    font-weight: bold;
-    color: #343a40;
-    margin-right: 10px;
+.delete-button {
+    background-color: #dc3545;
 }
 
-/* Label input for adding new labels */
-.label-input {
-    margin-top: 15px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
 }
 
 /* Dynamic text color based on background */
@@ -272,4 +453,33 @@ input:checked + .slider:before {
 
 .dark-text {
     color: black;
+}
+
+
+
+#app {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 100vh; /* Ensures the app container takes the full height */
+}
+
+.todo-content {
+    flex-grow: 1; /* Ensures the main content area grows to fill the space */
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* Pushes footer to the bottom */
+    width: 100%;
+}
+
+footer.footer p {
+    color: #e0d8d6; /* Change the text color to a different color */
+    font-size: 0.9 rem; /* Adjust the font size */
+    font-weight:; /* Make the text bold */
+    margin: 0; /* Remove any default margin */
 }

@@ -102,3 +102,32 @@ html, body {
     margin-top: 0;
     margin-bottom: 10px;
 }
+
+
+#app {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 100vh; /* Ensures the app container takes the full height */
+}
+
+.todo-content {
+    flex-grow: 1; /* Ensures the main content area grows to fill the space */
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto; /* Pushes footer to the bottom */
+    width: 100%;
+}
+
+footer.footer p {
+    color: #e0d8d6; /* Change the text color to a different color */
+    font-size: 0.9 rem; /* Adjust the font size */
+    font-weight:; /* Make the text bold */
+    margin: 0; /* Remove any default margin */
+}
+
