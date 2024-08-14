@@ -1,7 +1,3 @@
-Certainly! Here’s the updated README file with embedded images for each page:
-
----
-
 # Microproject#2 (Beta Ver.1)
 
 ## 🌐 [Live Preview](https://sikhbeparwah.engineer/Microproject-2-Beta-Ver.1/)
@@ -103,5 +99,3 @@ Microproject-2-Beta-Ver.1
 Thanks for exploring Microproject#2! 👋
 
 ---
-
-You can replace the image URLs in the `src` attributes with the actual links to your images hosted on GitHub or any other image hosting platform you prefer.
