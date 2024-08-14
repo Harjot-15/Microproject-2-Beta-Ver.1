@@ -1,0 +1,275 @@
+/* Overall container styling */
+.todo-content {
+    width: 90%;
+    margin: 20px auto;
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Task lists */
+.todo-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Task item */
+.todo-list li {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: grab;
+}
+
+.todo-list li:hover {
+    transform: translateY(-5px);
+}
+
+/* Completed task */
+.todo-list li.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Buttons */
+button {
+    background: #E95420;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #C24113;
+}
+
+/* Modal styling */
+.modal {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+    margin-bottom: 20px;
+    color: #E95420;
+}
+
+/* Form elements */
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #f0f0f0;
+    color: #333;
+    font-size: 14px;
+}
+
+/* Toggle switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-bottom: 15px;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #E95420;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Task sections */
+.task-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.task-sections section {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Section headings */
+.task-sections section h3 {
+    margin-bottom: 15px;
+    color: #343a40;
+}
+
+/* Labeled tasks section */
+.labeled-tasks {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Label columns */
+.label-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.label-column {
+    flex: 1;
+    min-width: calc(33% - 20px);
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Label heading */
+.label-column h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Task details */
+.task-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.task-details span {
+    font-size: 1rem;
+    color: #333;
+}
+
+.task-details small {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.task-details p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 5px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Task actions (Edit/Delete) */
+.task-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+.task-actions button {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+}
+
+/* Star icon for priority tasks */
+.star-icon {
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.star-icon.filled svg {
+    fill: green;
+    stroke: none;
+}
+
+/* Priority toggle */
+.priority-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.priority-toggle span {
+    font-weight: bold;
+    color: #343a40;
+    margin-right: 10px;
+}
+
+/* Label input for adding new labels */
+.label-input {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Dynamic text color based on background */
+.light-text {
+    color: white;
+}
+
+.dark-text {
+    color: black;
+}

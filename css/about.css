@@ -1,0 +1,260 @@
+.body, html {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.about-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.resume-section {
+    display: flex;
+    margin: 50px auto;
+    max-width: 1300px;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    animation: float 5s ease-in-out infinite;
+}
+
+.resume-container {
+    display: flex;
+    margin: 50px auto;
+    max-width: 1300px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: translateY(-20px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    }
+}
+
+.social-links {
+    display: flex;
+    width: 510px;
+    gap: 12px;
+    background-color: #e1e1e1;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.profile-link {
+    position: relative;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    border-radius: 0.8em;
+    cursor: pointer;
+    border: 1cm;
+    background: radial-gradient(circle, #E95420 30%, #C24113 70%);
+    color: ghostwhite;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8em 1.2em;
+    transition: background-color 0.4s, transform 0.4s;
+}
+
+.profile-link span {
+    z-index: 10;
+    transition: color 0.4s;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+}
+
+.profile-link::before, .profile-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.profile-link::before {
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+}
+
+.profile-link:hover::before {
+    transform: translate3d(100%, 0, 0);
+    background: radial-gradient(circle, #FF7B3A 10%, #FF5533 50%);
+}
+
+.profile-link:active {
+    transform: scale(0.95);
+}
+
+.profile-section, .details-section {
+    padding: 20px;
+}
+
+.profile-section {
+    width: 30%;
+    border-right: 3px solid #e0e0e0;
+    text-align: center;
+}
+
+.profile-image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+
+.profile-image img {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: none;
+    opacity: 0;
+    animation: fadeInImage 2s ease 2s forwards;
+}
+
+.magic-powder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, transparent 60%, rgba(233, 84, 32, 0.6) 70%, rgba(194, 65, 19, 0.6) 80%);
+    animation: magicEffect 2s forwards;
+}
+
+@keyframes magicEffect {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.details-section {
+    width: 70%;
+}
+
+h1, p, li, a {
+    color: #333;
+    font-size: 1.2em;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.skills ul, .detailed-skills ul, .education ul, .work-links p {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.skills ul li, .detailed-skills ul li, .education ul li {
+    position: relative;
+    padding-left: 30px;
+}
+
+.skills ul li:before, .detailed-skills ul li:before, .education ul li:before {
+    content: "⚫";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+}
+
+.quote p {
+    font-size: 1.5em;
+    font-style: italic;
+    border-left: 5px solid #555;
+    padding-left: 15px;
+}
+
+.html-feature, .quote, .detailed-skills-feature, .education-feature, .work-links-feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.html-feature-icon, .quote-icon, .detailed-skills-icon, .education-icon, .work-links-icon {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.html-feature-text, .quote-text, .detailed-skills-text, .education-text, .work-links-text {
+    font-size: 18px;
+}
+
+/* Button Styling */
+button {
+    background-color: #E95420;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #C24113;
+}

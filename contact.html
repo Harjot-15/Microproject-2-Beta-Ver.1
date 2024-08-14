@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Sikh Beperwah</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <header-component></header-component>
+        <div class="contact-section">
+            <div class="contact-content">
+                <div class="contact-card">
+                    <h3>Contact Information</h3>
+                    <div class="contact-card-item">
+                        <p><strong>Email:</strong> <a href="mailto:support@advancedtodomanger.com">support@advancedtodomanger.com</a></p>
+                    </div>
+                    <div class="contact-card-item">
+                        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                    </div>
+                    <div class="contact-card-item">
+                        <p><strong>Address:</strong> 1234 ToDo Street, Productivity City, PC 56789</p>
+                    </div>
+                    <h3>Feedback</h3>
+                    <p>We value your feedback. Please let us know how we can improve the Advanced ToDo Manager to better meet your needs.</p>
+                </div>
+                <div class="contact-form-container">
+                    <h2>Contact Me</h2>
+                    <form id="contact-form" class="form-container">
+                        <input type="text" name="name" placeholder="Your Name" class="form-input" required>
+                        <input type="email" name="email" placeholder="Your Email" class="form-input" required>
+                        <textarea name="message" placeholder="Your Message" class="form-input" required></textarea>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                    <div id="confirmation-message" class="confirmation-message" style="display: none;">
+                        <h3>Thank you for your message!</h3>
+                        <p>We will get back to you as soon as possible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer bg-dark text-white text-center py-3 mt-auto">
+            <p>&copy; 2024 Sikh Beperwah</p>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/components/HeaderComponent.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('confirmation-message').style.display = 'block';
+            this.reset();
+        });
+    </script>
+</body>
+</html>

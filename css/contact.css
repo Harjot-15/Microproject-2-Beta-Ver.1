@@ -1,0 +1,104 @@
+html, body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 20px;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px; /* Gap between the two columns */
+    max-width: 1200px;
+    width: 100%;
+}
+
+.contact-card, .contact-form-container {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card {
+    max-width: 500px;
+}
+
+.contact-card h3, .contact-form-container h2 {
+    font-size: 1.8rem;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.contact-card-item {
+    margin-bottom: 15px;
+}
+
+.contact-card-item p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 0;
+}
+
+.contact-card-item a {
+    color: #E95420;
+    text-decoration: none;
+}
+
+.contact-card-item a:hover {
+    text-decoration: underline;
+}
+
+.form-container .form-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+    background-color: #ffffff;
+    color: #333;
+}
+
+.form-container .submit-button {
+    background-color: #E95420;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container .submit-button:hover {
+    background-color: #C24113;
+}
+
+.confirmation-message {
+    display: none;
+    background-color: #dff0d8;
+    color: #3c763d;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #d6e9c6;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.confirmation-message h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
