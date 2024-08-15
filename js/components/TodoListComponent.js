@@ -4,7 +4,7 @@ Vue.component('todo-list', {
         const colors = ['#2de6da', '#dfa4a4', '#5becc0', '#3bf75a']; // Array of color options for labels
         return {
             tasks: [], // Array to store all tasks
-            showModal: false, // Boolean to control the visibility of the task modal
+            showModal: true, // Boolean to control the visibility of the task modal
             currentTask: null, // Object to hold the task being created or edited
             showDescriptionModal: false, // Boolean to control the visibility of the description modal
             labels: ['Work', 'Personal', 'Home', 'Urgent'], // Default labels for tasks
